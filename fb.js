@@ -1,34 +1,23 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-   
-    event.preventDefault();
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-   
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
 
-    
-    var xhr = new XMLHttpRequest();
-
-    
-    var formData = new FormData();
-    formData.append("username", username);
-    formData.append("password", password);
-
-    
-    xhr.open("POST", "a.php", true);
-
-    
-    xhr.responseType = "text";
-
-    
-    xhr.onload = function() {
-        
-        console.log(xhr.responseText);
-    };
-
-    
-    xhr.send(formData);
+    fetch('a.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password),
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
 });
+
 
 
 
