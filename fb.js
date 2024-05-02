@@ -4,7 +4,7 @@ function register() {
 
             
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'register.php', true);
+            xhr.open('POST', 'a.php', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
