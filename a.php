@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
 
         if ($stmt === false) {
-            die("预处理失败: " . $conn->error);
+            die("處理失败: " . $conn->error);
         }
 
         $stmt->bind_param("ss", $username, $password);
